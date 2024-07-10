@@ -15,7 +15,7 @@ This is a simple and efficient To-Do List application built using the Quasar Fra
 
 ![No Tasks added](public/screenshots/screenshot1.png)
 
-![Tasks Added](public/screenshots/screenshot1.png)
+![Tasks Added](public/screenshots/screenshot2.png)
 
 ## Technologies Used
 
