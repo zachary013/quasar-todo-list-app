@@ -1,0 +1,5 @@
+/**
+  * vue-cal v4.8.1
+  * (c) 2022 Antoni Andre <antoniandre.web@gmail.com>
+  * @license MIT
+  */define(["exports"],function(n){"use strict";const e=["Th\u1EE9 hai","Th\u1EE9 ba","Th\u1EE9 t\u01B0","Th\u1EE9 n\u0103m","Th\u1EE9 s\xE1u","Th\u1EE9 b\u1EA3y","Ch\u1EE7 nh\u1EADt"],t=["T2","T3","T4","T5","T6","T7","CN"],a=["Th\xE1ng 1","Th\xE1ng 2","Th\xE1ng 3","Th\xE1ng 4","Th\xE1ng 5","Th\xE1ng 6","Th\xE1ng 7","Th\xE1ng 8","Th\xE1ng 9","Th\xE1ng 10","Th\xE1ng 11","Th\xE1ng 12"],h="N\u0103m",y="N\u0103m nay",T="Th\xE1ng",o="Tu\u1EA7n",c="Ng\xE0y",d="H\xF4m nay",g="NKh\xF4ng c\xF3 Event",s="C\u1EA3 ng\xE0y",m="X\xF3a",l="T\u1EA1o event",v="dddd MMMM D YYYY",D={weekDays:e,weekDaysShort:t,months:a,years:h,year:y,month:T,week:o,day:c,today:d,noEvent:g,allDay:s,deleteEvent:m,createEvent:l,dateFormat:v};n.allDay=s,n.createEvent=l,n.dateFormat=v,n.day=c,n.default=D,n.deleteEvent=m,n.month=T,n.months=a,n.noEvent=g,n.today=d,n.week=o,n.weekDays=e,n.weekDaysShort=t,n.year=y,n.years=h,Object.defineProperty(n,Symbol.toStringTag,{value:"Module"})});

@@ -1,0 +1,5 @@
+/**
+  * vue-cal v4.8.1
+  * (c) 2022 Antoni Andre <antoniandre.web@gmail.com>
+  * @license MIT
+  */const E=["Th\u1EE9 hai","Th\u1EE9 ba","Th\u1EE9 t\u01B0","Th\u1EE9 n\u0103m","Th\u1EE9 s\xE1u","Th\u1EE9 b\u1EA3y","Ch\u1EE7 nh\u1EADt"],a=["T2","T3","T4","T5","T6","T7","CN"],n=["Th\xE1ng 1","Th\xE1ng 2","Th\xE1ng 3","Th\xE1ng 4","Th\xE1ng 5","Th\xE1ng 6","Th\xE1ng 7","Th\xE1ng 8","Th\xE1ng 9","Th\xE1ng 10","Th\xE1ng 11","Th\xE1ng 12"],e="N\u0103m",h="N\u0103m nay",t="Th\xE1ng",T="Tu\u1EA7n",x="Ng\xE0y",s="H\xF4m nay",u="NKh\xF4ng c\xF3 Event",y="C\u1EA3 ng\xE0y",g="X\xF3a",d="T\u1EA1o event",o="dddd MMMM D YYYY",m={weekDays:E,weekDaysShort:a,months:n,years:"N\u0103m",year:"N\u0103m nay",month:"Th\xE1ng",week:"Tu\u1EA7n",day:"Ng\xE0y",today:"H\xF4m nay",noEvent:"NKh\xF4ng c\xF3 Event",allDay:"C\u1EA3 ng\xE0y",deleteEvent:"X\xF3a",createEvent:"T\u1EA1o event",dateFormat:"dddd MMMM D YYYY"};export{y as allDay,d as createEvent,o as dateFormat,x as day,m as default,g as deleteEvent,t as month,n as months,u as noEvent,s as today,T as week,E as weekDays,a as weekDaysShort,h as year,e as years};

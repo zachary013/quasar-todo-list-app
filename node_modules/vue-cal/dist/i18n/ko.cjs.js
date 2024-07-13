@@ -1,0 +1,5 @@
+"use strict";/**
+  * vue-cal v4.8.1
+  * (c) 2022 Antoni Andre <antoniandre.web@gmail.com>
+  * @license MIT
+  */Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=["\uC6D4","\uD654","\uC218","\uBAA9","\uAE08","\uD1A0","\uC77C"],t=["1\uC6D4","2\uC6D4","3\uC6D4","4\uC6D4","5\uC6D4","6\uC6D4","7\uC6D4","8\uC6D4","9\uC6D4","10\uC6D4","11\uC6D4","12\uC6D4"],n="\uB144\uB3C4",o="\uC5F0\uAC04",a="\uC6D4\uAC04",s="\uC8FC\uAC04",y="\uC77C\uAC04",c="\uC624\uB298",d="\uC77C\uC815 \uC5C6\uC74C",r="\uD558\uB8E8 \uC885\uC77C",l="\uC0AD\uC81C",m="\uC77C\uC815 \uCD94\uAC00",v="YYYY\uB144 MMMM D\uC77C dddd\uC694\uC77C",E={weekDays:e,months:t,years:n,year:o,month:a,week:s,day:y,today:c,noEvent:d,allDay:r,deleteEvent:l,createEvent:m,dateFormat:v};exports.allDay=r;exports.createEvent=m;exports.dateFormat=v;exports.day=y;exports.default=E;exports.deleteEvent=l;exports.month=a;exports.months=t;exports.noEvent=d;exports.today=c;exports.week=s;exports.weekDays=e;exports.year=o;exports.years=n;

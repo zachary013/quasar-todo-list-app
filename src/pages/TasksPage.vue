@@ -20,26 +20,42 @@
       <q-item
         v-for="(task, index) in tasks"
         :key="task.title"
-        @click="task.done = !task.done"
         :class="{ 'done bg-blue-1': task.done }"
         clickable
         v-ripple
+        @mouseover="task.hover = true"
+        @mouseleave="task.hover = false"
       >
         <q-item-section avatar>
-          <q-checkbox v-model="task.done" color="primary" />
+          <q-checkbox
+            v-model="task.done"
+            @update:model-value="handleTaskCheck(task, index)"
+            color="primary"
+          />
         </q-item-section>
         <q-item-section>
           <q-item-label>{{ task.title }}</q-item-label>
         </q-item-section>
-        <q-item-section v-if="task.done"
-          ><q-btn
-            @click="deleteTask(index)"
-            flat
-            dense
-            round
-            color="secondary"
-            icon="delete"
-        /></q-item-section>
+        <q-item-section side v-if="task.hover">
+          <div class="button-group">
+            <q-btn
+              @click="deleteTask(index)"
+              flat
+              dense
+              round
+              color="secondary"
+              icon="delete"
+            />
+            <q-btn
+              flat
+              dense
+              round
+              color="warning"
+              icon="star"
+              @click="markAsImportant(task, index)"
+            />
+          </div>
+        </q-item-section>
       </q-item>
     </q-list>
     <div v-if="!tasks.length" class="no-tasks absolute-center">
@@ -50,62 +66,66 @@
 </template>
 
 <script setup>
-defineOptions({
-  data() {
-    return {
-      newTask: "",
-      tasks: [
-        {
-          title: "Complete laravel + vue.js project",
-          done: false,
-        },
-        {
-          title: "Start Quasar tutorial + simple project",
-          done: false,
-        },
-        {
-          title: "Advanced Quasar project",
-          done: false,
-        },
-      ],
-    };
-  },
-  methods: {
-    toggleTaskDone(task) {
-      task.done = !task.done;
-    },
-    deleteTask(index) {
-      this.$q
-        .dialog({
-          title: "Confirm",
-          message: "Do you really want to delete this task?",
-          cancel: true,
-          persistent: true,
-        })
-        .onOk(() => {
-          this.tasks.splice(index, 1);
-          this.$q.notify("Task deleted successfully");
-        });
-    },
-    addTask() {
-      this.tasks.push({
-        title: this.newTask,
-        done: false,
-      });
-      this.newTask = "";
-    },
-  },
-});
+import { ref, computed } from "vue";
+import { store } from "src/store";
+import { useRouter } from "vue-router";
+
+const tasks = computed(() => store.tasks);
+const newTask = ref("");
+const router = useRouter();
+
+const handleTaskCheck = (task, index) => {
+  if (task.done) {
+    setTimeout(() => {
+      toggleTaskDone(task, index);
+    }, 1000);
+  }
+};
+
+const toggleTaskDone = (task, index) => {
+  if (task.done) {
+    store.completedTasks.unshift(task); // Add to the beginning of the array
+    store.tasks.splice(index, 1);
+  }
+};
+
+const deleteTask = (index) => {
+  store.deletedTasks.unshift(store.tasks[index]);
+  store.tasks.splice(index, 1);
+};
+
+const addTask = () => {
+  if (newTask.value.trim()) {
+    store.tasks.push({
+      title: newTask.value.trim(),
+      done: false,
+      hover: false, // Add hover property to each task
+    });
+    newTask.value = "";
+  }
+};
+
+const markAsImportant = (task, index) => {
+  store.importantTasks.unshift(task); // Add to the beginning of the array
+  store.tasks.splice(index, 1);
+  // Removed the router.push("/important") line to stay on the same page
+};
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 .done {
   .q-item__label {
     text-decoration: line-through;
     color: #bbb;
   }
 }
+
 .no-tasks {
   opacity: 0.5px;
+}
+
+.button-group {
+  display: flex;
+  gap: 8px; /* Adjust the gap as needed */
 }
 </style>

@@ -40,6 +40,14 @@
             <q-item-section> Tasks </q-item-section>
           </q-item>
 
+          <q-item to="/completed" exact clickable v-ripple>
+            <q-item-section avatar>
+              <q-icon name="done" />
+            </q-item-section>
+
+            <q-item-section> Completed Tasks </q-item-section>
+          </q-item>
+
           <q-item to="/important" exact clickable v-ripple>
             <q-item-section avatar>
               <q-icon name="star" />
@@ -54,6 +62,14 @@
             </q-item-section>
 
             <q-item-section> Calendar </q-item-section>
+          </q-item>
+
+          <q-item to="/trash" exact clickable v-ripple>
+            <q-item-section avatar>
+              <q-icon name="delete" />
+            </q-item-section>
+
+            <q-item-section> Trash </q-item-section>
           </q-item>
 
           <q-item to="/help" exact clickable v-ripple>
@@ -156,6 +172,6 @@ function toggleLeftDrawer() {
 .header-image {
   height: 100%;
   z-index: -1;
-  opacity: 0.7;
+  //opacity: 0.2;
 }
 </style>

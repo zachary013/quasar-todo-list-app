@@ -1,0 +1,5 @@
+/**
+  * vue-cal v4.8.1
+  * (c) 2022 Antoni Andre <antoniandre.web@gmail.com>
+  * @license MIT
+  */const a=["Pirmadienis","Antradienis","Tre\u010Diadienis","Ketvirtadienis","Penktadienis","\u0160e\u0161tadienis","Sekmadienis"],e=["Sausis","Vasaris","Kovas","Balandis","Gegu\u017E\u0117","Bir\u017Eelis","Liepa","Rugpj\u016Btis","Rugs\u0117jis","Spalis","Lapkritis","Gruodis"],i="Met\u0173 pasirinkimas",s="Metai",t="M\u0117nesis",u="Savait\u0117",n="Diena",d="\u0160iandien",r="Joki\u0173 \u012Fvyki\u0173",k="Visa diena",o="I\u0161trinti",y="Sukurti \u012Fvyk\u012F",v="dddd, D MMMM YYYY",M={weekDays:a,months:e,years:i,year:"Metai",month:"M\u0117nesis",week:"Savait\u0117",day:"Diena",today:"\u0160iandien",noEvent:"Joki\u0173 \u012Fvyki\u0173",allDay:"Visa diena",deleteEvent:"I\u0161trinti",createEvent:"Sukurti \u012Fvyk\u012F",dateFormat:"dddd, D MMMM YYYY"};export{k as allDay,y as createEvent,v as dateFormat,n as day,M as default,o as deleteEvent,t as month,e as months,r as noEvent,d as today,u as week,a as weekDays,s as year,i as years};
