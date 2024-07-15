@@ -35,7 +35,3 @@ This is a simple To-Do List application built using the Quasar Framework. The ap
 ![Screenshot 5](public/screenshots/screenshot5.png)
 ![Screenshot 6](public/screenshots/screenshot6.png)
 
-## Install the Dependencies
-
-```bash
-npm install
